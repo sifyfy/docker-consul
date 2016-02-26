@@ -1,0 +1,9 @@
+#!/bin/bash -eu
+
+docker run -d --name consul1 \
+              -h consul1 \
+              -v $PWD/examples/server.json:/config/server.json:ro \
+              -v /etc/localtime:/etc/localtime:ro \
+              -v /etc/timezone:/etc/timezone:ro \
+              siphilia/consul:latest \
+              -ui

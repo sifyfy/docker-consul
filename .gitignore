@@ -5,3 +5,5 @@ core
 *.swp
 *~
 *.bak
+*.zip
+/ui/
