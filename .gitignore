@@ -1,0 +1,7 @@
+.DS_Store
+.directory
+Thumbs.db
+core
+*.swp
+*~
+*.bak
