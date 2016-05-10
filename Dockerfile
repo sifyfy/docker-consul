@@ -3,7 +3,8 @@ FROM ubuntu:16.04
 ADD config /config
 
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get install --no-install-recommends -y wget unzip ca-certificates && \
+RUN apt-get update && \
+    apt-get install --no-install-recommends -y wget unzip ca-certificates && \
     wget -O /tmp/consul.zip https://releases.hashicorp.com/consul/0.6.3/consul_0.6.3_linux_amd64.zip && \
     unzip /tmp/consul.zip -d /usr/local/bin && \
     rm /tmp/consul.zip && \
