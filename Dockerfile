@@ -10,6 +10,7 @@ RUN apt-get install --no-install-recommends -y wget unzip ca-certificates && \
     mkdir /data && \
     apt-get purge -y wget unzip && \
     apt-get autoremove -y && \
+    apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
 EXPOSE 8300 8301 8301/udp 8302 8302/udp 8400 8500 8600 8600/udp
