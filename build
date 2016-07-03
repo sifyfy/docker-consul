@@ -1,7 +1,0 @@
-#!/bin/bash -eu
-
-VERSION="0.6.3"
-TAG=$([[ $# -ne 0 ]] && echo $1 || echo $VERSION)
-
-date
-docker build -t siphilia/consul:$TAG .
